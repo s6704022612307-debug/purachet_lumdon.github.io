@@ -14,15 +14,15 @@
         }
 
         body {
-            background-color: #e9ecef;
+            background-color: #e2e8f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            color: #2b2b2b;
+            padding: 30px 10px;
+            color: #1e293b;
         }
 
-        /* จำลองขนาดหน้ากระดาษ A4 */
+        /* ขนาด A4 มาตรฐาน */
         .a4-page {
             width: 210mm;
             min-height: 297mm;
@@ -30,53 +30,29 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            position: relative;
             overflow: hidden;
         }
 
-        /* ส่วนหัว / แบนเนอร์ */
+        /* ส่วนหัวสีน้ำเงินเข้ม */
         .header-banner {
-            background: linear-gradient(135deg, #0d3b66 0%, #1d4ed8 100%);
+            background: #0f2b5c;
             color: #ffffff;
-            padding: 40px 40px 30px 40px;
+            padding: 35px 40px;
             display: flex;
             align-items: center;
             gap: 30px;
-            position: relative;
         }
 
-        .header-banner::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: #f4a261;
-        }
-
-        /* กรอบรูปถ่าย */
-        .profile-container {
-            position: relative;
-            flex-shrink: 0;
-        }
-
+        /* กรอบรูปถ่ายเปิดมาเห็นเลย */
         .profile-img {
-            width: 140px;
-            height: 175px;
+            width: 135px;
+            height: 170px;
             object-fit: cover;
-            border-radius: 6px;
-            border: 4px solid #ffffff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            background-color: #1e3a8a;
-            display: block;
-        }
-
-        .upload-hint {
-            font-size: 11px;
-            color: #dbeafe;
-            text-align: center;
-            margin-top: 6px;
+            border-radius: 4px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            background-color: #1d4ed8;
         }
 
         .header-title {
@@ -84,61 +60,48 @@
         }
 
         .header-title h1 {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
             color: #ffffff;
         }
 
         .header-title h2 {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 500;
             color: #93c5fd;
             margin-bottom: 12px;
         }
 
         .header-title .tagline {
-            font-size: 14px;
+            font-size: 13.5px;
             line-height: 1.6;
-            color: #f1f5f9;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 6px;
-            border-left: 3px solid #60a5fa;
+            color: #e2e8f0;
+            font-weight: 300;
         }
 
-        /* ส่วนเนื้อหาหลัก */
+        /* ส่วนเนื้อหาแบ่ง 2 คอลัมน์ */
         .content-body {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 35px;
+            gap: 40px;
             padding: 40px;
             flex-grow: 1;
         }
 
         .section-block {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .section-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            color: #0d3b66;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 6px;
-            margin-bottom: 15px;
+            color: #0f2b5c;
+            border-bottom: 2.5px solid #1d4ed8;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
             text-transform: uppercase;
-        }
-
-        .section-header .icon {
-            width: 8px;
-            height: 18px;
-            background-color: #2563eb;
-            border-radius: 2px;
         }
 
         .info-list {
@@ -146,113 +109,67 @@
         }
 
         .info-list li {
-            font-size: 14.5px;
+            font-size: 14px;
             line-height: 1.8;
             color: #334155;
-            display: flex;
         }
 
         .info-list li strong {
             color: #0f172a;
-            min-width: 120px;
             font-weight: 600;
         }
 
         .bullet-list {
-            list-style-type: none;
-            padding-left: 5px;
-        }
-
-        .bullet-list li {
-            font-size: 14.5px;
-            color: #334155;
-            line-height: 1.8;
-            position: relative;
+            list-style-type: disc;
             padding-left: 20px;
         }
 
-        .bullet-list li::before {
-            content: "•";
-            color: #2563eb;
-            font-weight: bold;
-            font-size: 18px;
-            position: absolute;
-            left: 0;
-            top: -2px;
+        .bullet-list li {
+            font-size: 14px;
+            color: #334155;
+            line-height: 1.8;
         }
 
-        /* ตกแต่งส่วนการศึกษา */
         .edu-item {
-            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #334155;
         }
 
-        .edu-item .degree {
-            font-weight: 700;
-            color: #1e293b;
-            font-size: 15px;
-        }
-
-        .edu-item .faculty {
-            color: #2563eb;
+        .edu-item .major {
             font-weight: 600;
-            font-size: 14px;
-        }
-
-        .edu-item .uni {
-            color: #475569;
-            font-size: 14px;
-        }
-
-        .edu-item .year {
-            font-size: 13px;
-            color: #64748b;
-            margin-top: 2px;
+            color: #0f2b5c;
         }
 
         @media print {
-            body {
-                background: none;
-                padding: 0;
-            }
-            .a4-page {
-                box-shadow: none;
-            }
-            .upload-hint {
-                display: none;
-            }
+            body { background: none; padding: 0; }
+            .a4-page { box-shadow: none; }
         }
     </style>
 </head>
 <body>
 
     <div class="a4-page">
-        <!-- Header Banner -->
+        <!-- Header Section -->
         <div class="header-banner">
-            <div class="profile-container">
-                <!-- สามารถเปลี่ยน src=" profile.jpg " เป็นชื่อไฟล์รูปภาพของคุณได้ -->
-                <img id="profilePreview" class="profile-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='175' viewBox='0 0 140 175'><rect width='100%' height='100%' fill='%231d4ed8'/><circle cx='70' cy='60' r='30' fill='%23f8fafc'/><path d='M 25 150 Q 70 90 115 150 L 115 175 L 25 175 Z' fill='%230f172a'/><path d='M 55 120 L 70 145 L 85 120 Z' fill='%23ffffff'/><path d='M 67 125 L 70 175 L 73 125 Z' fill='%23b91c1c'/></svg>" alt="รูปประวัติส่วนตัว">
-                <div class="upload-hint">คลิกที่รูปเพื่อเปลี่ยนภาพ</div>
-                <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
-            </div>
+            <!-- ใส่ชื่อไฟล์รูปภาพของคุณตรง src="profile.jpg" -->
+            <img class="profile-img" src="profile.jpg" alt="ปุรเชษฐ์ ลำดวน">
+            
             <div class="header-title">
-                <h1>RESUME</h1>
-                <h2>ประวัติส่วนตัว</h2>
+                <h1>ปุรเชษฐ์ ลำดวน (เปรม)</h1>
+                <h2>นักศึกษาคณิตศาสตร์เชิงวิทยาการคอมพิวเตอร์</h2>
                 <div class="tagline">
                     ปัจจุบันกำลังศึกษาระดับปริญญาตรี สาขาคณิตศาสตร์เชิงวิทยาการคอมพิวเตอร์ มีทักษะการเขียนโปรแกรมเพื่อพัฒนาซอฟต์แวร์ ฉันหวังเป็นอย่างมากที่จะเรียนรู้เกี่ยวกับงานที่ได้รับมอบหมายอย่างดี
                 </div>
             </div>
         </div>
 
-        <!-- Content Body -->
+        <!-- Main Content -->
         <div class="content-body">
-            <!-- Left Column -->
+            <!-- คอลัมน์ซ้าย -->
             <div class="left-col">
-                <!-- ข้อมูลส่วนตัว -->
                 <div class="section-block">
-                    <div class="section-header">
-                        <div class="icon"></div>
-                        <span>ข้อมูลส่วนตัว</span>
-                    </div>
+                    <div class="section-header">ข้อมูลส่วนตัว</div>
                     <ul class="info-list">
                         <li><strong>ชื่อ - สกุล :</strong> ปุรเชษฐ์ ลำดวน</li>
                         <li><strong>ชื่อเล่น :</strong> เปรม</li>
@@ -261,28 +178,17 @@
                     </ul>
                 </div>
 
-                <!-- การติดต่อ -->
                 <div class="section-block">
-                    <div class="section-header">
-                        <div class="icon"></div>
-                        <span>การติดต่อ</span>
-                    </div>
+                    <div class="section-header">การติดต่อ</div>
                     <ul class="info-list">
-                        <li><strong>Email :</strong> s6704022612307@email.kmutnb.th</li>
+                        <li><strong>email :</strong> s6704022612307@email.kmutnb.th</li>
                         <li><strong>โทร :</strong> 092-867-5850</li>
-                        <li style="align-items: flex-start;">
-                            <strong>ที่อยู่ :</strong> 
-                            <span>316/21 Soi WongSawang 11 WongSawang Bang Sue Bangkok 10800 Thailand</span>
-                        </li>
+                        <li><strong>ที่อยู่ :</strong> 316/21 Soi WongSawang 11 WongSawang Bang Sue Bangkok 10800 Thailand</li>
                     </ul>
                 </div>
 
-                <!-- บุคคลอ้างอิง -->
                 <div class="section-block">
-                    <div class="section-header">
-                        <div class="icon"></div>
-                        <span>บุคคลอ้างอิง</span>
-                    </div>
+                    <div class="section-header">บุคคลอ้างอิง</div>
                     <ul class="info-list">
                         <li><strong>ชื่อ :</strong> อุดม ลำดวน</li>
                         <li><strong>โทร :</strong> 099-119-5584</li>
@@ -290,40 +196,29 @@
                 </div>
             </div>
 
-            <!-- Right Column -->
+            <!-- คอลัมน์ขวา -->
             <div class="right-col">
-                <!-- การศึกษา -->
                 <div class="section-block">
-                    <div class="section-header">
-                        <div class="icon"></div>
-                        <span>การศึกษา</span>
-                    </div>
+                    <div class="section-header">การศึกษา</div>
                     <div class="edu-item">
-                        <div class="degree">ระดับอุดมศึกษา</div>
-                        <div class="faculty">สาขาคณิตศาสตร์เชิงวิทยาการคอมพิวเตอร์</div>
-                        <div class="uni">คณะวิทยาศาสตร์ประยุกต์<br>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</div>
-                        <div class="year">คาดว่าจะสำเร็จการศึกษา ปี 2028</div>
+                        <p><strong>ระดับ :</strong> อุดมศึกษา</p>
+                        <p class="major">สาขาคณิตศาสตร์เชิงวิทยาการคอมพิวเตอร์</p>
+                        <p>คณะวิทยาศาสตร์ประยุกต์</p>
+                        <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+                        <p style="margin-top: 4px; color: #64748b; font-size: 13px;">สำเร็จการศึกษา ปี 2028</p>
                     </div>
                 </div>
 
-                <!-- ความสามารถ -->
                 <div class="section-block">
-                    <div class="section-header">
-                        <div class="icon"></div>
-                        <span>ความสามารถ</span>
-                    </div>
+                    <div class="section-header">ความสามารถ</div>
                     <ul class="bullet-list">
                         <li>ทักษะการเขียนโปรแกรม</li>
                         <li>ทักษะการตัดต่อ</li>
                     </ul>
                 </div>
 
-                <!-- งานอดิเรก -->
                 <div class="section-block">
-                    <div class="section-header">
-                        <div class="icon"></div>
-                        <span>งานอดิเรก</span>
-                    </div>
+                    <div class="section-header">งานอดิเรก</div>
                     <ul class="bullet-list">
                         <li>เดินเล่น</li>
                         <li>อ่านหนังสือ</li>
@@ -334,22 +229,5 @@
         </div>
     </div>
 
-    <script>
-        // คลิกที่รูปเพื่อเลือกอัปโหลดรูปภาพจริงจากเครื่องได้ทันที
-        document.getElementById('profilePreview').addEventListener('click', function() {
-            document.getElementById('imageInput').click();
-        });
-
-        function previewImage(event) {
-            const reader = new FileReader();
-            reader.onload = function(){
-                const output = document.getElementById('profilePreview');
-                output.src = reader.result;
-            };
-            if(event.target.files[0]) {
-                reader.readAsDataURL(event.target.files[0]);
-            }
-        }
-    </script>
 </body>
 </html>
